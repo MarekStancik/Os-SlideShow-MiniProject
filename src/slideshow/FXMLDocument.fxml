@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="667.0" prefWidth="949.0" stylesheets="@SomeCSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slideshow.FXMLDocumentController">
+<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="667.0" prefWidth="949.0" styleClass="root" stylesheets="@SomeCSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slideshow.FXMLDocumentController">
    <children>
       <BorderPane layoutY="221.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -44,7 +44,7 @@
          <left>
             <VBox fx:id="vboxLeft" prefHeight="572.0" prefWidth="175.0" BorderPane.alignment="CENTER">
                <children>
-                  <ToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onSlideShowButton" prefHeight="50.0" prefWidth="175.0" selected="true" text="SlideShow 1">
+                  <ToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onSlideShowButton" prefHeight="50.0" prefWidth="175.0" selected="true" styleClass="button" text="SlideShow 1">
                      <toggleGroup>
                         <ToggleGroup fx:id="tgLeft" />
                      </toggleGroup>

@@ -1,8 +1,7 @@
 .root{
     -fx-text-fill: #ebb140; /*EASV Yellow*/
     -fx-prompt-text-fill: #00b0eb; /*EASV Blue*/
-    -fx-background-color: #313131
-        ;
+    -fx-background-color: #313131;
 }
 
 .tree-table-view .tree-table-cell{
@@ -10,10 +9,20 @@
     
 }
 
-.jfx-button{
-    
+.button{
+    -fx-background-color: #414141;
+    -fx-border-color: #ebb140;
+    -fx-text-fill: #ebb140;
 }
 
+.button:hover{
+    -fx-background-color: #515151;
+    -fx-border-color: #00b0eb;
+    -fx-text-fill: #00b0eb;
+}
 
-
-
+.button:pressed{
+    -fx-background-color: #6161161;
+    -fx-border-color: #00c0sfc;
+    -fx-text-fill: #00c0fc;
+}
