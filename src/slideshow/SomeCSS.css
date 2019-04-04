@@ -26,3 +26,9 @@
     -fx-border-color: #00c0sfc;
     -fx-text-fill: #00c0fc;
 }
+
+.button:selected{
+    -fx-background-color: #616120;
+    -fx-border-color: #00c0sfc;
+    -fx-text-fill: #00c0fc;
+}

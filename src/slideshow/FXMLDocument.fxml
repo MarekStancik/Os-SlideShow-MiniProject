@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="667.0" prefWidth="949.0" styleClass="root" stylesheets="@SomeCSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slideshow.FXMLDocumentController">
+<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="667.0" prefWidth="949.0" stylesheets="@SomeCSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slideshow.FXMLDocumentController">
    <children>
       <BorderPane layoutY="221.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -30,7 +30,7 @@
                   <Button layoutX="370.0" layoutY="15.0" mnemonicParsing="false" onAction="#onPrev" text="Prev" AnchorPane.bottomAnchor="8.0" />
                   <Button layoutX="636.0" layoutY="15.0" mnemonicParsing="false" onAction="#onNext" text="Next" AnchorPane.bottomAnchor="8.0" />
                   <Slider fx:id="sliderSpeed" blockIncrement="1.0" layoutX="463.0" layoutY="30.0" max="10.0" min="1.0" onMouseReleased="#onChangeSpeed" value="1.0" AnchorPane.bottomAnchor="8.0" />
-                  <Label layoutX="502.0" layoutY="6.0" text="Speed" />
+                  <Label layoutX="502.0" layoutY="6.0" styleClass="root" text="Interval" />
                   <Button layoutY="6.0" mnemonicParsing="false" onAction="#onStartAll" prefHeight="43.0" prefWidth="172.0" text="Start all" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="16.0" />
                </children>
             </AnchorPane>

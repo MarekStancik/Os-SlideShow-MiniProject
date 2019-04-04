@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -67,7 +68,7 @@ public class FXMLDocumentController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
-        slideShows = new ArrayList<SlideImages>();
+        slideShows = new CopyOnWriteArrayList<SlideImages>();
         setSlideShow(new SlideImages());
         slideShows.add(slideShow);
     }    
@@ -81,6 +82,8 @@ public class FXMLDocumentController implements Initializable
     @FXML
     private void onStop(ActionEvent event)
     {
+        if(executor != null && !executor.isShutdown())
+            executor.shutdown();
         slideShow.stop();
     }
 
@@ -146,6 +149,7 @@ public class FXMLDocumentController implements Initializable
         {
             slideShows.add(new SlideImages());
             ToggleButton btn = new ToggleButton("SlideShow " + ++slideShowIdx);
+            btn.getStyleClass().add("button");
             btn.setToggleGroup(tgLeft);
             btn.setOnAction((e)->{
                 onSlideShowButton(e);
