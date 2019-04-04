@@ -176,10 +176,11 @@ public class FXMLDocumentController implements Initializable
     @FXML
     private void onStartAll(ActionEvent event)
     {
-        for(SlideImages slide: slideShows)
+   /*     for(SlideImages slide: slideShows)
         {
             slide.start();
-        }
+        }*/
+        slideShow.start();
         executor = Executors.newScheduledThreadPool(1);
         executor.scheduleAtFixedRate( ()->nextSlideShow() , 20, 20, TimeUnit.SECONDS);
         
@@ -187,6 +188,7 @@ public class FXMLDocumentController implements Initializable
     
     private void nextSlideShow()
     {
+        slideShow.stop();
         int index = slideShows.indexOf(slideShow);
         if(index > -1)
         {
@@ -199,7 +201,7 @@ public class FXMLDocumentController implements Initializable
                 newBtn.setSelected(true);
             });
             setSlideShow(slideShows.get(index));
-
+            slideShow.start();
         }
     }
     
