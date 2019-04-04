@@ -1,0 +1,19 @@
+.root{
+    -fx-text-fill: #ebb140; /*EASV Yellow*/
+    -fx-prompt-text-fill: #00b0eb; /*EASV Blue*/
+    -fx-background-color: #313131
+        ;
+}
+
+.tree-table-view .tree-table-cell{
+    -fx-alignment: CENTER;
+    
+}
+
+.jfx-button{
+    
+}
+
+
+
+
