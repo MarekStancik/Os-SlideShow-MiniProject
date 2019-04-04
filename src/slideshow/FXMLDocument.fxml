@@ -11,37 +11,40 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="667.0" prefWidth="949.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="slideshow.FXMLDocumentController">
+<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="667.0" prefWidth="949.0" stylesheets="@SomeCSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slideshow.FXMLDocumentController">
    <children>
       <BorderPane layoutY="221.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <AnchorPane prefHeight="41.0" prefWidth="949.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button layoutX="281.0" layoutY="5.0" mnemonicParsing="false" onAction="#onStop" text="Stop" />
-                  <Button layoutX="215.0" layoutY="5.0" mnemonicParsing="false" onAction="#onStart" text="Start" />
-                  <Button layoutX="895.0" layoutY="5.0" mnemonicParsing="false" onAction="#onLoad" text="Load Images" />
-                  <Label fx:id="labelFileName" layoutX="494.0" layoutY="10.0" text="Image View" />
+                  <Button layoutX="281.0" layoutY="5.0" mnemonicParsing="false" onAction="#onStop" text="Stop" AnchorPane.topAnchor="8.0" />
+                  <Button layoutX="215.0" layoutY="5.0" mnemonicParsing="false" onAction="#onStart" text="Start" AnchorPane.topAnchor="8.0" />
+                  <Button layoutX="895.0" layoutY="5.0" mnemonicParsing="false" onAction="#onLoad" text="Load Images" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="8.0" />
+                  <Label fx:id="labelFileName" layoutX="494.0" layoutY="10.0" text="Image View" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="150.0" />
                </children>
             </AnchorPane>
          </top>
          <bottom>
             <AnchorPane prefHeight="54.0" prefWidth="224.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button layoutX="370.0" layoutY="15.0" mnemonicParsing="false" onAction="#onPrev" text="Prev" />
-                  <Button layoutX="636.0" layoutY="15.0" mnemonicParsing="false" onAction="#onNext" text="Next" />
-                  <Slider fx:id="sliderSpeed" blockIncrement="1.0" layoutX="463.0" layoutY="30.0" max="10.0" min="1.0" onMouseReleased="#onChangeSpeed" value="1.0" />
+                  <Button layoutX="370.0" layoutY="15.0" mnemonicParsing="false" onAction="#onPrev" text="Prev" AnchorPane.bottomAnchor="8.0" />
+                  <Button layoutX="636.0" layoutY="15.0" mnemonicParsing="false" onAction="#onNext" text="Next" AnchorPane.bottomAnchor="8.0" />
+                  <Slider fx:id="sliderSpeed" blockIncrement="1.0" layoutX="463.0" layoutY="30.0" max="10.0" min="1.0" onMouseReleased="#onChangeSpeed" value="1.0" AnchorPane.bottomAnchor="8.0" />
                   <Label layoutX="502.0" layoutY="6.0" text="Speed" />
-                  <Button layoutY="6.0" mnemonicParsing="false" onAction="#onStartAll" prefHeight="43.0" prefWidth="172.0" text="Start all" />
+                  <Button layoutY="6.0" mnemonicParsing="false" onAction="#onStartAll" prefHeight="43.0" prefWidth="172.0" text="Start all" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="16.0" />
                </children>
             </AnchorPane>
          </bottom>
          <center>
-            <ImageView fx:id="imageView" fitHeight="576.0" fitWidth="832.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+            <ImageView fx:id="imageView" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </BorderPane.margin></ImageView>
          </center>
          <left>
             <VBox fx:id="vboxLeft" prefHeight="572.0" prefWidth="175.0" BorderPane.alignment="CENTER">
                <children>
-                  <ToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onSlideShowButton" prefHeight="50.0" selected="true" text="SlideShow 1">
+                  <ToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onSlideShowButton" prefHeight="50.0" prefWidth="175.0" selected="true" text="SlideShow 1">
                      <toggleGroup>
                         <ToggleGroup fx:id="tgLeft" />
                      </toggleGroup>
@@ -53,7 +56,7 @@
                   </Button>
                </children>
                <BorderPane.margin>
-                  <Insets />
+                  <Insets left="16.0" />
                </BorderPane.margin>
             </VBox>
          </left>
