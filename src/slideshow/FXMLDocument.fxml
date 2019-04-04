@@ -20,7 +20,7 @@
                   <Button layoutX="281.0" layoutY="5.0" mnemonicParsing="false" onAction="#onStop" text="Stop" AnchorPane.topAnchor="8.0" />
                   <Button layoutX="215.0" layoutY="5.0" mnemonicParsing="false" onAction="#onStart" text="Start" AnchorPane.topAnchor="8.0" />
                   <Button layoutX="895.0" layoutY="5.0" mnemonicParsing="false" onAction="#onLoad" text="Load Images" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="8.0" />
-                  <Label fx:id="labelFileName" layoutX="494.0" layoutY="10.0" text="Image View" />
+                  <Label fx:id="labelFileName" layoutX="494.0" layoutY="10.0" text="Image View" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="150.0" />
                </children>
             </AnchorPane>
          </top>
